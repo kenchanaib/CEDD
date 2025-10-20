@@ -18,6 +18,7 @@
     <title>Hung Shui Kiu / Ha Tsuen New Development Area - AR Game</title>
     <script src="aframe-master.min.js"></script>
     <script src='aframe-ar-nft.js'></script>
+    <script src='aframe-transparent-video-shader.js'></script>
     <style>
         /* Ensure the scene takes up the full viewport */
         body {
@@ -280,6 +281,10 @@
                 video.pause();
                 video.currentTime = 0;
             }, 10)
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                avid.removeAttribute("material", "shader");
+            }
         }
     </script>
 </body>

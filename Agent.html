@@ -281,6 +281,10 @@
                 video.pause();
                 video.currentTime = 0;
             }, 10)
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                avid.removeAttribute("material", "shader");
+            }
         }
     </script>
 </body>
