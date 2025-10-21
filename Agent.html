@@ -258,9 +258,6 @@
                     z: markerPosition.z - 350
                 });
                 avid.setAttribute('scale', "0.77 1.28 0");
-                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                
-                }
                 setTimeout(() => {
                     avid.emit('restartMove');
                 }, 1000)
