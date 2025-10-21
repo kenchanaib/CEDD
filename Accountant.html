@@ -256,7 +256,7 @@
                     y: markerPosition.y + 145,
                     z: markerPosition.z - 350
                 });
-                avid.setAttribute('scale', "1 1.6 0");
+                avid.setAttribute('scale', "0.92 1.6 0");
                 setTimeout(() => {
                     avid.emit('restartMove');
                 }, 1000)
@@ -279,7 +279,7 @@
             setTimeout(() => {
                 video.pause();
                 video.currentTime = 0;
-            }, 10)
+            }, 10);
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             if (/android/i.test(userAgent)) {
                 avid.removeAttribute("material", "shader");
